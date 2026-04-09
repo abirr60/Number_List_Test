@@ -172,3 +172,19 @@ else:
             score -= 1
             if score < 0:
                 score = 0
+
+
+    # ---------------------------------
+    # End of test
+    # ---------------------------------
+
+    end_time = time.time()
+    total_time = end_time - start_time
+    average_time = total_time / questions
+
+    print(f"\nTest Complete! You took {total_time:.2f} seconds.")
+    print(f"You scored {score}/{questions} question(s) correct.")
+    print(f"Average of {average_time:.2f} seconds per question.")
+
+    if score == questions:
+        print("Perfect score, well done!")
