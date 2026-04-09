@@ -26,3 +26,22 @@ def random_list(quantity, minimum, maximum):
 
     return numbers
 
+def ask_question(question, answer):
+
+    print(question)
+
+    while True:
+        user_input = input("> ")
+
+        try:
+            user_answer = int(user_input)
+            break
+        except ValueError:
+            print("Invalid input! Please enter an integer.")
+
+    if user_answer == answer:
+        print("Correct!")
+        return True
+
+    print(f"Incorrect! Correct answer was {answer}.")
+    return False
